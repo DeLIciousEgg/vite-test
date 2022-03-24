@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite';
 import { resolve } from 'pathe';
 import vue from '@vitejs/plugin-vue';
+import legacy from '@vitejs/plugin-legacy';
 import WindiCSS from 'vite-plugin-windicss';
 import VueI18n from '@intlify/vite-plugin-vue-i18n';
 import Components from 'unplugin-vue-components/vite'
@@ -48,6 +49,11 @@ export default defineConfig({
     VueI18n({
       include: [resolve(__dirname, './locales/**')],
     }),
+    
+    legacy({
+      targets: ['ie >= 11'],
+      additionalLegacyPolyfills: ['regenerator-runtime/runtime']
+    })
   ],
 
   optimizeDeps: {

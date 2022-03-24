@@ -5,6 +5,7 @@ specifiers:
   '@iconify/json': ^2.1.3
   '@intlify/vite-plugin-vue-i18n': ^3.3.0
   '@types/node': ^17.0.18
+  '@vitejs/plugin-legacy': ^1.7.1
   '@vitejs/plugin-vue': ^2.2.2
   '@vueuse/core': ^7.6.2
   pathe: ^0.2.0
@@ -31,6 +32,7 @@ devDependencies:
   '@iconify/json': 2.1.3
   '@intlify/vite-plugin-vue-i18n': 3.3.0_ce828d16c4e80881af0d3b7928628a00
   '@types/node': 17.0.18
+  '@vitejs/plugin-legacy': 1.7.1_vite@2.8.4
   '@vitejs/plugin-vue': 2.2.2_vite@2.8.4+vue@3.2.31
   '@vueuse/core': 7.6.2_vue@3.2.31
   pathe: 0.2.0
@@ -61,6 +63,11 @@ packages:
     resolution: {integrity: sha512-7yJPvPV+ESz2IUTPbOL+YkIGyCqOyNIzdguKQuJGnH7bg1WTIifuM21YqokFt/THWh1AkCRn9IgoykTRCBVpzA==}
     engines: {node: '>=6.0.0'}
     hasBin: true
+
+  /@babel/standalone/7.17.8:
+    resolution: {integrity: sha512-tr3SDpVnxR/fzrxyG+HZPAyEA9eTHZIAjy4eqrc7m+KBwsdo1YvTbUfJ6teWHQ177mk6GmdmltsIiOYCcvRPWA==}
+    engines: {node: '>=6.9.0'}
+    dev: true
 
   /@babel/types/7.17.0:
     resolution: {integrity: sha512-TmKSNO4D5rzhL5bjWFcVHHLETzfQ/AmbKpKPOSjlP0WoHZ6L911fgoOKY4Alp/emzG4cHJdyN49zpgkbXFEHHw==}
@@ -270,6 +277,20 @@ packages:
 
   /@types/throttle-debounce/2.1.0:
     resolution: {integrity: sha512-5eQEtSCoESnh2FsiLTxE121IiE60hnMqcb435fShf4bpLRjEu1Eoekht23y6zXS9Ts3l+Szu3TARnTsA0GkOkQ==}
+    dev: true
+
+  /@vitejs/plugin-legacy/1.7.1_vite@2.8.4:
+    resolution: {integrity: sha512-RqgILXsGpfV7NHodVCdBVau8ss5+ynMXp6JGF/F7nhSy0bnwSQPlMS3KFqh7twfifXK8VuMriqfU4CxOiqmNnA==}
+    engines: {node: '>=12.0.0'}
+    peerDependencies:
+      vite: ^2.8.0
+    dependencies:
+      '@babel/standalone': 7.17.8
+      core-js: 3.21.1
+      magic-string: 0.25.7
+      regenerator-runtime: 0.13.9
+      systemjs: 6.12.1
+      vite: 2.8.4
     dev: true
 
   /@vitejs/plugin-vue/2.2.2_vite@2.8.4+vue@3.2.31:
@@ -599,6 +620,11 @@ packages:
     dependencies:
       '@babel/parser': 7.17.3
       '@babel/types': 7.17.0
+    dev: true
+
+  /core-js/3.21.1:
+    resolution: {integrity: sha512-FRq5b/VMrWlrmCzwRrpDYNxyHP9BcAZC+xHJaqTgIE5091ZV1NTmyh0sGOg5XqpnHvR0svdy0sv1gWA1zmhxig==}
+    requiresBuild: true
     dev: true
 
   /cross-fetch/3.1.5:
@@ -1342,6 +1368,10 @@ packages:
       picomatch: 2.3.1
     dev: true
 
+  /regenerator-runtime/0.13.9:
+    resolution: {integrity: sha512-p3VT+cOEgxFsRRA9X4lkI1E+k2/CtnKtU4gcxyaCUreilL/vqI6CdZ3wxVUx3UOUg+gnUOQQcRI7BmSI656MYA==}
+    dev: true
+
   /resolve/1.22.0:
     resolution: {integrity: sha512-Hhtrw0nLeSrFQ7phPp4OOcVjLPIeMnRlr5mcnVuMe7M/7eBn98A3hmFRLoFo3DLZkivSYwhRUJTyPyWAk56WLw==}
     hasBin: true
@@ -1426,6 +1456,10 @@ packages:
       csso: 4.2.0
       picocolors: 1.0.0
       stable: 0.1.8
+    dev: true
+
+  /systemjs/6.12.1:
+    resolution: {integrity: sha512-hqTN6kW+pN6/qro6G9OZ7ceDQOcYno020zBQKpZQLsJhYTDMCMNfXi/Y8duF5iW+4WWZr42ry0MMkcRGpbwG2A==}
     dev: true
 
   /to-fast-properties/2.0.0:
